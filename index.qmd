@@ -1,0 +1,6 @@
+---
+title: "index"
+editor: visual
+---
+
+Practical One of Statistical computing there are 4 questions.

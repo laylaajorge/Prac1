@@ -1,0 +1,12 @@
+---
+title: "Question one"
+format: html
+---
+
+## 
+
+```{r echo=TRUE}
+rowsNA <-which((is.na(airquality))) 
+
+rowsNA
+```

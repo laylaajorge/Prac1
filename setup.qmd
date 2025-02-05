@@ -1,0 +1,11 @@
+---
+title: "Project setup"
+---
+
+
+```{r}
+library(projrsimple)
+projr_init()
+airquality
+cars
+```

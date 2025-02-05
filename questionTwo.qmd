@@ -1,0 +1,44 @@
+---
+title: "questionTwo"
+format: html
+---
+
+```{r echo=-2}
+tempmean <- mean(airquality$Temp,na.rm=TRUE)
+tempmean
+```
+
+```{r echo=-2}
+tempsd <- sd(airquality$Temp,na.rm=TRUE)
+tempsd
+```
+
+```{r echo=-2}
+ tempmin <- min(airquality$Temp,na.rm=TRUE)
+ tempmin
+```
+
+```{r echo=-2}
+tempmax <- max(airquality$Temp,na.rm=TRUE)
+tempmax
+```
+
+```{r echo=-2}
+ozonemean <- mean(airquality$Ozone,na.rm=TRUE)
+ozonemean
+```
+
+```{r echo=-2}
+ozonesd <- sd(airquality$Ozone,na.rm=TRUE)
+ozonesd
+```
+
+```{r echo=-2}
+ozonemin <- min(airquality$Ozone,na.rm=TRUE)
+ozonemin
+```
+
+```{r echo=-2}
+ozonemax <- max(airquality$Ozone,na.rm=TRUE)
+ozonemax
+```

@@ -1,0 +1,10 @@
+---
+title: "Question four"
+editor: visual
+---
+
+```{r}
+modelfit <- lm(dist~speed,data=cars)
+summary(modelfit)
+
+```
