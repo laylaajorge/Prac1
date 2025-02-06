@@ -1,0 +1,8 @@
+---
+title: "Question One"
+---
+
+```{r echo=-2}
+rowsNA <-which((is.na(airquality))) 
+rowsNA
+```

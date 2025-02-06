@@ -1,20 +1,17 @@
 project:
   type: book
-  
-  
+
 book:
   title: "Practical One"
   date: "5 February 2025"
   chapters:
     - index.qmd
-    - setup.qmd
     - questionone.qmd
     - questionTwo.qmd
     - questionThree.qmd
     - question4.qmd
-    
+
 format:
-  pdf: 
+  pdf:
     documentclass: book
     toc: true
-

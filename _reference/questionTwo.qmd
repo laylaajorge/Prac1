@@ -1,6 +1,5 @@
 ---
-title: "questionTwo"
-format: html
+title: "Question Two"
 ---
 
 ```{r echo=-2}

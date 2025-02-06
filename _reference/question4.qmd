@@ -1,6 +1,5 @@
 ---
-title: "Question four"
-editor: visual
+title: "Question Four"
 ---
 
 ```{r}

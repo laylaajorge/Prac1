@@ -1,17 +1,12 @@
 ---
-title: "questionThree"
-editor: visual
+title: "Question Three"
 ---
 
 ```{r echo=5}
 yvalues <- cars$dist
-
 xvalues <- cars$speed
-
 ymatrix <- as.matrix(yvalues)
-
 xmatrix <- cbind(1,as.matrix(xvalues))
-
 beta <- solve(t(xmatrix)%*%xmatrix)%*%t(xmatrix)%*%ymatrix
-
+beta
 ```
