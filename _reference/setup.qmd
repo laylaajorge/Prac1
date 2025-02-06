@@ -1,0 +1,9 @@
+---
+title: "Project setup"
+---
+```{r echo=FALSE,results='hide'}
+#library(projrsimple)
+#projr_init()
+airquality
+cars
+```

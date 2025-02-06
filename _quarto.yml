@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "Practical One"
+  title: "Statistical Computing - Practical One"
   date: "5 February 2025"
   chapters:
     - index.qmd
@@ -10,7 +10,13 @@ book:
     - questionTwo.qmd
     - questionThree.qmd
     - question4.qmd
-
+  sidebar:
+    border: true
+    background: light
+    position: right
+  navbar:
+    background: light
+    
 format:
   html:
     theme: cosmo

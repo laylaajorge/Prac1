@@ -2,4 +2,4 @@
 title: "Index"
 ---
 
-Practical One of Statistical computing .This practical consists of 4 questions .
+Practical One of Statistical Computing .This practical consists of 4 questions .

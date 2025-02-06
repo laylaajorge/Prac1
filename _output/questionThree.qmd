@@ -2,6 +2,8 @@
 title: "Question Three"
 ---
 
+### Parameter estimates using matrix calculations
+
 ```{r echo=5}
 yvalues <- cars$dist
 xvalues <- cars$speed

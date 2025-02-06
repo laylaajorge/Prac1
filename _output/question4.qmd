@@ -2,6 +2,8 @@
 title: "Question Four"
 ---
 
+### Fitting a linear model using lm()
+
 ```{r}
 modelfit <- lm(dist~speed,data=cars)
 summary(modelfit)
