@@ -12,6 +12,9 @@ book:
     - question4.qmd
 
 format:
-  pdf:
-    documentclass: book
+  html:
+    theme: cosmo
     toc: true
+    toc-depth: 3
+    toc-location: left
+  
