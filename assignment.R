@@ -34,8 +34,13 @@ xvalues
 ymatrix <- as.matrix(yvalues)
 ymatrix
 xmatrix <- cbind(1,as.matrix(xvalues))##the 1s allows us to include the intercept in the model thats why without the value of b1 is different
-beta <- solve(t(xmatrix)%*%xmatrix)%*%t(xmatrix)%*%ymatrix
-beta
+betas <- solve(t(xmatrix)%*%xmatrix)%*%t(xmatrix)%*%ymatrix
+betas
+
+f <- function(x,y){
+  beta = solve(t(x)%*%x)%*%t(x)%*%y
+  
+}
 #======================================
 #Simple linear model using lm()
 #======================================

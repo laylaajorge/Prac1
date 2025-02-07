@@ -1,9 +1,0 @@
----
-title: "Question Four"
----
-
-```{r}
-modelfit <- lm(dist~speed,data=cars)
-summary(modelfit)
-
-```
