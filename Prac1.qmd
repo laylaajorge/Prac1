@@ -1,5 +1,5 @@
 ---
-title: "Question One"
+title: "Practical One"
 ---
 
 ### Finding all row numbers of "airquality" with missing values
