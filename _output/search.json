@@ -12,11 +12,11 @@
   {
     "objectID": "Prac1.html",
     "href": "Prac1.html",
-    "title": "2  Question One",
+    "title": "2  Practical One",
     "section": "",
     "text": "2.0.1 Finding all row numbers of “airquality” with missing values\n\nrowsNA &lt;-which((is.na(airquality))) \n\n [1]   5  10  25  26  27  32  33  34  35  36  37  39  42  43  45  46  52  53  54\n[20]  55  56  57  58  59  60  61  65  72  75  83  84 102 103 107 115 119 150 158\n[39] 159 164 180 249 250 251\n\n\n\n\n2.0.2 Mean of temperature\n\ntempmean &lt;- mean(airquality$Temp,na.rm=TRUE)\n\n[1] 77.88235\n\n\n\n\n2.0.3 Standard deviation of temperature\n\ntempsd &lt;- sd(airquality$Temp,na.rm=TRUE) \n\n[1] 9.46527\n\n\n\n\n2.0.4 Minimum of temperature\n\ntempmin &lt;- min(airquality$Temp,na.rm=TRUE)  \n\n[1] 56\n\n\n\n\n2.0.5 Maximum of temperature\n\ntempmax &lt;- max(airquality$Temp,na.rm=TRUE) \n\n[1] 97\n\n\n\n\n2.0.6 Mean of Ozone\n\nozonemean &lt;- mean(airquality$Ozone,na.rm=TRUE) \n\n[1] 42.12931\n\n\n\n\n2.0.7 Standard deviation of Ozone\n\nozonesd &lt;- sd(airquality$Ozone,na.rm=TRUE)\n\n[1] 32.98788\n\n\n\n\n2.0.8 Minimum of Ozone\n\nozonemin &lt;- min(airquality$Ozone,na.rm=TRUE) \n\n[1] 1\n\n\n\n\n2.0.9 Maximum of Ozone\n\nozonemax &lt;- max(airquality$Ozone,na.rm=TRUE) \n\n[1] 168\n\n\n\n\n2.0.10 Parameter estimates using matrix calculations\n\nbeta &lt;- solve(t(xmatrix)%*%xmatrix)%*%t(xmatrix)%*%ymatrix \n\n           [,1]\n[1,] -17.579095\n[2,]   3.932409\n\n\n\n\n2.0.11 Fitting a linear model using lm()\n\nmodelfit &lt;- lm(dist~speed,data=cars) \nsummary(modelfit) \n\n\nCall:\nlm(formula = dist ~ speed, data = cars)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-29.069  -9.525  -2.272   9.215  43.201 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -17.5791     6.7584  -2.601   0.0123 *  \nspeed         3.9324     0.4155   9.464 1.49e-12 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.38 on 48 degrees of freedom\nMultiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 \nF-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Question One</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Practical One</span>"
     ]
   }
 ]
