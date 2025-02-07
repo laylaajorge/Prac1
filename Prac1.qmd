@@ -1,0 +1,84 @@
+---
+title: "Question One"
+---
+
+### Finding all row numbers of "airquality" with missing values
+
+```{r echo=-2}
+rowsNA <-which((is.na(airquality))) 
+rowsNA
+```
+
+### Mean of temperature
+
+```{r echo=-2}
+tempmean <- mean(airquality$Temp,na.rm=TRUE)
+tempmean
+```
+
+### Standard deviation of temperature
+
+```{r echo=-2}
+tempsd <- sd(airquality$Temp,na.rm=TRUE) 
+tempsd
+```
+
+### Minimum of temperature
+
+```{r echo=-2}
+tempmin <- min(airquality$Temp,na.rm=TRUE)  
+tempmin
+```
+
+### Maximum of temperature
+
+```{r echo=-2}
+tempmax <- max(airquality$Temp,na.rm=TRUE) 
+tempmax
+```
+
+### Mean of Ozone
+
+```{r echo=-2}
+ozonemean <- mean(airquality$Ozone,na.rm=TRUE) 
+ozonemean
+```
+
+### Standard deviation of Ozone
+
+```{r echo=-2}
+ozonesd <- sd(airquality$Ozone,na.rm=TRUE)
+ozonesd
+```
+
+### Minimum of Ozone
+
+```{r echo=-2}
+ozonemin <- min(airquality$Ozone,na.rm=TRUE) 
+ozonemin
+```
+
+### Maximum of Ozone
+
+```{r echo=-2}
+ozonemax <- max(airquality$Ozone,na.rm=TRUE) 
+ozonemax
+```
+
+### Parameter estimates using matrix calculations
+
+```{r echo=5}
+yvalues <- cars$dist 
+xvalues <- cars$speed 
+ymatrix <- as.matrix(yvalues) 
+xmatrix <- cbind(1,as.matrix(xvalues)) 
+beta <- solve(t(xmatrix)%*%xmatrix)%*%t(xmatrix)%*%ymatrix 
+beta
+```
+
+### Fitting a linear model using lm()
+
+```{r}
+modelfit <- lm(dist~speed,data=cars) 
+summary(modelfit) 
+```

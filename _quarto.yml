@@ -7,10 +7,7 @@ book:
   date: "5 February 2025"
   chapters:
     - index.qmd
-    - questionone.qmd
-    - questionTwo.qmd
-    - questionThree.qmd
-    - question4.qmd
+    - Prac1.qmd
   sidebar:
     border: true
     background: light

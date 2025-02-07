@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Question Four – Statistical Computing - Practical One</title>
+<title>2&nbsp; Question One – Statistical Computing - Practical One</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./questionThree.html" rel="prev">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -126,7 +126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./question4.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Question Four</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Prac1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Question One</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -146,26 +146,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./questionone.html" class="sidebar-item-text sidebar-link">
+  <a href="./Prac1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Question One</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./questionTwo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Question Two</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./questionThree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Question Three</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./question4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Question Four</span></span></a>
   </div>
 </li>
     </ul>
@@ -174,7 +156,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#fitting-a-linear-model-using-lm" id="toc-fitting-a-linear-model-using-lm" class="nav-link active" data-scroll-target="#fitting-a-linear-model-using-lm"><span class="header-section-number">5.0.1</span> Fitting a linear model using lm()</a></li>
+  <li><a href="#finding-all-row-numbers-of-airquality-with-missing-values" id="toc-finding-all-row-numbers-of-airquality-with-missing-values" class="nav-link active" data-scroll-target="#finding-all-row-numbers-of-airquality-with-missing-values"><span class="header-section-number">2.0.1</span> Finding all row numbers of “airquality” with missing values</a></li>
+  <li><a href="#mean-of-temperature" id="toc-mean-of-temperature" class="nav-link" data-scroll-target="#mean-of-temperature"><span class="header-section-number">2.0.2</span> Mean of temperature</a></li>
+  <li><a href="#standard-deviation-of-temperature" id="toc-standard-deviation-of-temperature" class="nav-link" data-scroll-target="#standard-deviation-of-temperature"><span class="header-section-number">2.0.3</span> Standard deviation of temperature</a></li>
+  <li><a href="#minimum-of-temperature" id="toc-minimum-of-temperature" class="nav-link" data-scroll-target="#minimum-of-temperature"><span class="header-section-number">2.0.4</span> Minimum of temperature</a></li>
+  <li><a href="#maximum-of-temperature" id="toc-maximum-of-temperature" class="nav-link" data-scroll-target="#maximum-of-temperature"><span class="header-section-number">2.0.5</span> Maximum of temperature</a></li>
+  <li><a href="#mean-of-ozone" id="toc-mean-of-ozone" class="nav-link" data-scroll-target="#mean-of-ozone"><span class="header-section-number">2.0.6</span> Mean of Ozone</a></li>
+  <li><a href="#standard-deviation-of-ozone" id="toc-standard-deviation-of-ozone" class="nav-link" data-scroll-target="#standard-deviation-of-ozone"><span class="header-section-number">2.0.7</span> Standard deviation of Ozone</a></li>
+  <li><a href="#minimum-of-ozone" id="toc-minimum-of-ozone" class="nav-link" data-scroll-target="#minimum-of-ozone"><span class="header-section-number">2.0.8</span> Minimum of Ozone</a></li>
+  <li><a href="#maximum-of-ozone" id="toc-maximum-of-ozone" class="nav-link" data-scroll-target="#maximum-of-ozone"><span class="header-section-number">2.0.9</span> Maximum of Ozone</a></li>
+  <li><a href="#parameter-estimates-using-matrix-calculations" id="toc-parameter-estimates-using-matrix-calculations" class="nav-link" data-scroll-target="#parameter-estimates-using-matrix-calculations"><span class="header-section-number">2.0.10</span> Parameter estimates using matrix calculations</a></li>
+  <li><a href="#fitting-a-linear-model-using-lm" id="toc-fitting-a-linear-model-using-lm" class="nav-link" data-scroll-target="#fitting-a-linear-model-using-lm"><span class="header-section-number">2.0.11</span> Fitting a linear model using lm()</a></li>
   </ul>
 </nav>
 </nav>
@@ -187,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Question Four</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Question One</span></h1>
 </div>
 
 
@@ -204,11 +196,105 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="fitting-a-linear-model-using-lm" class="level3" data-number="5.0.1">
-<h3 data-number="5.0.1" class="anchored" data-anchor-id="fitting-a-linear-model-using-lm"><span class="header-section-number">5.0.1</span> Fitting a linear model using lm()</h3>
+<section id="finding-all-row-numbers-of-airquality-with-missing-values" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="finding-all-row-numbers-of-airquality-with-missing-values"><span class="header-section-number">2.0.1</span> Finding all row numbers of “airquality” with missing values</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>modelfit <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist<span class="sc">~</span>speed,<span class="at">data=</span>cars)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelfit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>rowsNA <span class="ot">&lt;-</span><span class="fu">which</span>((<span class="fu">is.na</span>(airquality))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]   5  10  25  26  27  32  33  34  35  36  37  39  42  43  45  46  52  53  54
+[20]  55  56  57  58  59  60  61  65  72  75  83  84 102 103 107 115 119 150 158
+[39] 159 164 180 249 250 251</code></pre>
+</div>
+</div>
+</section>
+<section id="mean-of-temperature" class="level3" data-number="2.0.2">
+<h3 data-number="2.0.2" class="anchored" data-anchor-id="mean-of-temperature"><span class="header-section-number">2.0.2</span> Mean of temperature</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tempmean <span class="ot">&lt;-</span> <span class="fu">mean</span>(airquality<span class="sc">$</span>Temp,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 77.88235</code></pre>
+</div>
+</div>
+</section>
+<section id="standard-deviation-of-temperature" class="level3" data-number="2.0.3">
+<h3 data-number="2.0.3" class="anchored" data-anchor-id="standard-deviation-of-temperature"><span class="header-section-number">2.0.3</span> Standard deviation of temperature</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tempsd <span class="ot">&lt;-</span> <span class="fu">sd</span>(airquality<span class="sc">$</span>Temp,<span class="at">na.rm=</span><span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9.46527</code></pre>
+</div>
+</div>
+</section>
+<section id="minimum-of-temperature" class="level3" data-number="2.0.4">
+<h3 data-number="2.0.4" class="anchored" data-anchor-id="minimum-of-temperature"><span class="header-section-number">2.0.4</span> Minimum of temperature</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tempmin <span class="ot">&lt;-</span> <span class="fu">min</span>(airquality<span class="sc">$</span>Temp,<span class="at">na.rm=</span><span class="cn">TRUE</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 56</code></pre>
+</div>
+</div>
+</section>
+<section id="maximum-of-temperature" class="level3" data-number="2.0.5">
+<h3 data-number="2.0.5" class="anchored" data-anchor-id="maximum-of-temperature"><span class="header-section-number">2.0.5</span> Maximum of temperature</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tempmax <span class="ot">&lt;-</span> <span class="fu">max</span>(airquality<span class="sc">$</span>Temp,<span class="at">na.rm=</span><span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 97</code></pre>
+</div>
+</div>
+</section>
+<section id="mean-of-ozone" class="level3" data-number="2.0.6">
+<h3 data-number="2.0.6" class="anchored" data-anchor-id="mean-of-ozone"><span class="header-section-number">2.0.6</span> Mean of Ozone</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ozonemean <span class="ot">&lt;-</span> <span class="fu">mean</span>(airquality<span class="sc">$</span>Ozone,<span class="at">na.rm=</span><span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 42.12931</code></pre>
+</div>
+</div>
+</section>
+<section id="standard-deviation-of-ozone" class="level3" data-number="2.0.7">
+<h3 data-number="2.0.7" class="anchored" data-anchor-id="standard-deviation-of-ozone"><span class="header-section-number">2.0.7</span> Standard deviation of Ozone</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ozonesd <span class="ot">&lt;-</span> <span class="fu">sd</span>(airquality<span class="sc">$</span>Ozone,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32.98788</code></pre>
+</div>
+</div>
+</section>
+<section id="minimum-of-ozone" class="level3" data-number="2.0.8">
+<h3 data-number="2.0.8" class="anchored" data-anchor-id="minimum-of-ozone"><span class="header-section-number">2.0.8</span> Minimum of Ozone</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ozonemin <span class="ot">&lt;-</span> <span class="fu">min</span>(airquality<span class="sc">$</span>Ozone,<span class="at">na.rm=</span><span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+</div>
+</section>
+<section id="maximum-of-ozone" class="level3" data-number="2.0.9">
+<h3 data-number="2.0.9" class="anchored" data-anchor-id="maximum-of-ozone"><span class="header-section-number">2.0.9</span> Maximum of Ozone</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ozonemax <span class="ot">&lt;-</span> <span class="fu">max</span>(airquality<span class="sc">$</span>Ozone,<span class="at">na.rm=</span><span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 168</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-using-matrix-calculations" class="level3" data-number="2.0.10">
+<h3 data-number="2.0.10" class="anchored" data-anchor-id="parameter-estimates-using-matrix-calculations"><span class="header-section-number">2.0.10</span> Parameter estimates using matrix calculations</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="fu">solve</span>(<span class="fu">t</span>(xmatrix)<span class="sc">%*%</span>xmatrix)<span class="sc">%*%</span><span class="fu">t</span>(xmatrix)<span class="sc">%*%</span>ymatrix </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           [,1]
+[1,] -17.579095
+[2,]   3.932409</code></pre>
+</div>
+</div>
+</section>
+<section id="fitting-a-linear-model-using-lm" class="level3" data-number="2.0.11">
+<h3 data-number="2.0.11" class="anchored" data-anchor-id="fitting-a-linear-model-using-lm"><span class="header-section-number">2.0.11</span> Fitting a linear model using lm()</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>modelfit <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist<span class="sc">~</span>speed,<span class="at">data=</span>cars) </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelfit) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -654,8 +740,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./questionThree.html" class="pagination-link" aria-label="Question Three">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Question Three</span></span>
+      <a href="./index.html" class="pagination-link" aria-label="Index">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Index</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
