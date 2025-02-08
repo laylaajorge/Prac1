@@ -67,13 +67,28 @@ ozonemax
 
 ### Parameter estimates using matrix calculations
 
-```{r echo=5}
+```{r}
 yvalues <- cars$dist 
 xvalues <- cars$speed 
-ymatrix <- as.matrix(yvalues) 
-xmatrix <- cbind(1,as.matrix(xvalues)) 
-beta <- solve(t(xmatrix)%*%xmatrix)%*%t(xmatrix)%*%ymatrix 
-beta
+
+f <- function(xvalues,yvalues){
+ 
+  y <- as.matrix(yvalues)
+  x <- cbind(1,as.matrix(xvalues))
+  beta <- solve(t(x)%*%x)%*%t(x)%*%y
+  n <- nrow(y)
+  k <- ncol(x)
+  residual <- (y-x%*%beta)
+  fraction <- 1/(n-k)
+  rss <-sum(residual^2)
+  s <- sqrt(rss*fraction)
+  varres <- s^2*solve(t(x)%*%x)
+  se <- sqrt(diag(varres))
+  return(list("coefficents"=beta,"std.error"=se))
+}
+modelcalc <- f(xvalues,yvalues)
+modelcalc 
+
 ```
 
 ### Fitting a linear model using lm()
@@ -81,4 +96,26 @@ beta
 ```{r}
 modelfit <- lm(dist~speed,data=cars) 
 summary(modelfit) 
+```
+
+### Comparing coefficients 
+
+```{r echo=c(1,4)}
+lmcoe <- coef(modelfit)
+lmcoe
+cat("\n")
+calcoe <-modelcalc$coefficents
+calcoe 
+cat("\n")
+```
+
+### Comparing standard errors
+
+```{r echo=c(1,5)}
+lmse <- summary(modelfit)$coefficients[, 2]
+lmse
+cat("\n")
+calstd <- modelcalc$std.error
+calstd
+cat("\n")
 ```

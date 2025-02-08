@@ -3,8 +3,7 @@ project:
   output-dir: _output
 
 book:
-  title: "Statistical Computing - Practical One"
-  date: "5 February 2025"
+  title: "Statistical Computing"
   chapters:
     - index.qmd
     - Prac1.qmd

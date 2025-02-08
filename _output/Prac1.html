@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Practical One – Statistical Computing - Practical One</title>
+<title>2&nbsp; Practical One – Statistical Computing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Statistical Computing - Practical One</span>
+    <span class="navbar-title">Statistical Computing</span>
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
@@ -167,6 +167,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#maximum-of-ozone" id="toc-maximum-of-ozone" class="nav-link" data-scroll-target="#maximum-of-ozone"><span class="header-section-number">2.0.9</span> Maximum of Ozone</a></li>
   <li><a href="#parameter-estimates-using-matrix-calculations" id="toc-parameter-estimates-using-matrix-calculations" class="nav-link" data-scroll-target="#parameter-estimates-using-matrix-calculations"><span class="header-section-number">2.0.10</span> Parameter estimates using matrix calculations</a></li>
   <li><a href="#fitting-a-linear-model-using-lm" id="toc-fitting-a-linear-model-using-lm" class="nav-link" data-scroll-target="#fitting-a-linear-model-using-lm"><span class="header-section-number">2.0.11</span> Fitting a linear model using lm()</a></li>
+  <li><a href="#comparing-coefficients" id="toc-comparing-coefficients" class="nav-link" data-scroll-target="#comparing-coefficients"><span class="header-section-number">2.0.12</span> Comparing coefficients</a></li>
+  <li><a href="#comparing-standard-errors" id="toc-comparing-standard-errors" class="nav-link" data-scroll-target="#comparing-standard-errors"><span class="header-section-number">2.0.13</span> Comparing standard errors</a></li>
   </ul>
 </nav>
 </nav>
@@ -282,11 +284,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="parameter-estimates-using-matrix-calculations" class="level3" data-number="2.0.10">
 <h3 data-number="2.0.10" class="anchored" data-anchor-id="parameter-estimates-using-matrix-calculations"><span class="header-section-number">2.0.10</span> Parameter estimates using matrix calculations</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="fu">solve</span>(<span class="fu">t</span>(xmatrix)<span class="sc">%*%</span>xmatrix)<span class="sc">%*%</span><span class="fu">t</span>(xmatrix)<span class="sc">%*%</span>ymatrix </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>yvalues <span class="ot">&lt;-</span> cars<span class="sc">$</span>dist </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>xvalues <span class="ot">&lt;-</span> cars<span class="sc">$</span>speed </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(xvalues,yvalues){</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(yvalues)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>,<span class="fu">as.matrix</span>(xvalues))</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  beta <span class="ot">&lt;-</span> <span class="fu">solve</span>(<span class="fu">t</span>(x)<span class="sc">%*%</span>x)<span class="sc">%*%</span><span class="fu">t</span>(x)<span class="sc">%*%</span>y</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(y)</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="fu">ncol</span>(x)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  residual <span class="ot">&lt;-</span> (y<span class="sc">-</span>x<span class="sc">%*%</span>beta)</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  fraction <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">/</span>(n<span class="sc">-</span>k)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  rss <span class="ot">&lt;-</span><span class="fu">sum</span>(residual<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(rss<span class="sc">*</span>fraction)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  varres <span class="ot">&lt;-</span> s<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span><span class="fu">solve</span>(<span class="fu">t</span>(x)<span class="sc">%*%</span>x)</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">diag</span>(varres))</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">"coefficents"</span><span class="ot">=</span>beta,<span class="st">"std.error"</span><span class="ot">=</span>se))</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>modelcalc <span class="ot">&lt;-</span> <span class="fu">f</span>(xvalues,yvalues)</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>modelcalc </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>           [,1]
+<pre><code>$coefficents
+           [,1]
 [1,] -17.579095
-[2,]   3.932409</code></pre>
+[2,]   3.932409
+
+$std.error
+[1] 6.7584402 0.4155128</code></pre>
 </div>
 </div>
 </section>
@@ -314,6 +339,36 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 Residual standard error: 15.38 on 48 degrees of freedom
 Multiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 
 F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12</code></pre>
+</div>
+</div>
+</section>
+<section id="comparing-coefficients" class="level3" data-number="2.0.12">
+<h3 data-number="2.0.12" class="anchored" data-anchor-id="comparing-coefficients"><span class="header-section-number">2.0.12</span> Comparing coefficients</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>lmcoe <span class="ot">&lt;-</span> <span class="fu">coef</span>(modelfit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Intercept)       speed 
+ -17.579095    3.932409 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>calcoe <span class="ot">&lt;-</span>modelcalc<span class="sc">$</span>coefficents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           [,1]
+[1,] -17.579095
+[2,]   3.932409</code></pre>
+</div>
+</div>
+</section>
+<section id="comparing-standard-errors" class="level3" data-number="2.0.13">
+<h3 data-number="2.0.13" class="anchored" data-anchor-id="comparing-standard-errors"><span class="header-section-number">2.0.13</span> Comparing standard errors</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>lmse <span class="ot">&lt;-</span> <span class="fu">summary</span>(modelfit)<span class="sc">$</span>coefficients[, <span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Intercept)       speed 
+  6.7584402   0.4155128 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>calstd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.7584402 0.4155128</code></pre>
 </div>
 </div>
 
