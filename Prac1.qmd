@@ -98,7 +98,7 @@ modelfit <- lm(dist~speed,data=cars)
 summary(modelfit) 
 ```
 
-### Comparing coefficients 
+### Comparing coefficients
 
 ```{r echo=c(1,4)}
 lmcoe <- coef(modelfit)
@@ -111,7 +111,7 @@ cat("\n")
 
 ### Comparing standard errors
 
-```{r echo=c(1,5)}
+```{r echo=c(1,4)}
 lmse <- summary(modelfit)$coefficients[, 2]
 lmse
 cat("\n")
