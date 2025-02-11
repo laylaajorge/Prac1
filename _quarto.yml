@@ -7,6 +7,8 @@ book:
   chapters:
     - index.qmd
     - Prac1.qmd
+    - Prac2.qmd
+    - Prac3.qmd
   sidebar:
     border: true
     background: light

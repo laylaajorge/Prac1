@@ -1,0 +1,91 @@
+---
+title: "Practical 3"
+editor: visual
+---
+
+### Setup
+
+```{r}
+install.packages("nycflights13")
+library(dplyr)
+library(tidyr)
+```
+
+### Displaying data in alternative form
+
+```{r}
+data(flights,package="nycflights13")
+tibble(flights)
+```
+
+### Rewriting provided code
+
+```{r}
+flights|>filter(month==1)|>group_by(carrier)|>summarise(meandist =mean(distance),stddist=sd(distance))|>arrange(meandist)
+
+```
+
+### Explaining Standard deviation with demonstration 
+
+```{r}
+flights|>filter(carrier=="OO") 
+
+flights|>filter(carrier=="HA") |>pull(distance)
+```
+
+The standard deviation is NA as there is only one value.
+
+The standard deviation is 0 as all the values for a specific carrier are the same .An example would be HA the distance is 4983 for all therefore the standard deviation value is 0.\
+
+###  Constructing a dataframe  where the carriers are along the columns, and the rows are the average departure delay (`dep_delay`) flown by each carrier (`carrier`) in each month
+
+```{r}
+new_df <- flights |> group_by(month,carrier) |> summarise(meandelay = mean(dep_delay,na.rm=TRUE)) |>pivot_wider(names_from=carrier,values_from = meandelay)
+new_df
+```
+
+### Proportion of flights that were delayed but arrived on time
+
+```{r}
+filteredfli <-flights |>filter(dep_delay>0&arr_delay<=0) 
+filterlen <-nrow(filteredfli)
+originallen<-nrow(flights)
+prop <- filterlen/originallen
+prop
+```
+
+### Routes that more than one airline flies
+
+```{r}
+flights |> select(origin,dest,carrier)|>distinct() |>group_by(origin,dest) |> summarise(countc=n()) |>filter(countc>1)
+```
+
+###  Average arrival delay for each airline
+
+```{r}
+meancalc<-flights|> select(origin,dest,carrier,arr_delay) |>group_by(origin,dest,carrier) |> summarise(meanarr = mean(arr_delay,na.rm=TRUE)) |> left_join(airlines,by= "carrier")
+meancalc
+```
+
+###  Worst and best average arrival delay 
+
+```{r}
+maxdelay <- max(meancalc$meanarr, na.rm = TRUE)
+maxname <- meancalc |> filter(meanarr==maxdelay) 
+maxname
+
+mindelay <- min(meancalc$meanarr, na.rm = TRUE)
+minname <- meancalc |> filter(meanarr==mindelay)
+minname
+```
+
+###   Reason for difference
+
+\
+A possible reason could be too many flights departing early and arriving late
+
+### Indentifying inconsistency 
+
+```{r}
+UtilsDataRSV::view_cols(dataset)
+```
