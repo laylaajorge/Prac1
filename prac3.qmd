@@ -38,7 +38,7 @@ flights|>filter(carrier=="HA") |>pull(distance)
 
 #### The standard deviation is 0 as all the values for a specific carrier are the same .An example would be HA the distance is 4983 for all therefore the standard deviation value is 0. 
 
-###  Constructing a dataframe  where the carriers are along the columns, and the rows are the average departure delay (`dep_delay`) flown by each carrier (`carrier`) in each month
+###  Constructing a data frame  where the carriers are along the columns, and the rows are the average departure delay (`dep_delay`) flown by each carrier (`carrier`) in each month
 
 ```{r}
 new_df <- flights |> group_by(month,carrier) |> summarise(meandelay = mean(dep_delay,na.rm=TRUE)) |>pivot_wider(names_from=carrier,values_from = meandelay)
