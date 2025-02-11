@@ -21,8 +21,8 @@ customLowess <- function(x,y,f){
   k <- f*length(x)
   for(i in 1:100){
     distance <- abs(x[i]-x)
-    distordered <- order(distance)
-    x_neigh <- distordered[1:k]
+    dist_ordered <- order(distance)
+    x_neigh <- dist_ordered[1:k]
     x_distances <- distance[x_neigh]
     d_max <- max(x_distances)
     Wj <- (1-(distance[x_neigh]/d_max)^3)^3

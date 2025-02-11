@@ -1,5 +1,5 @@
 ---
-title: "Practical 3"
+title: "Practical Three"
 editor: visual
 ---
 
@@ -34,9 +34,9 @@ flights|>filter(carrier=="OO")
 flights|>filter(carrier=="HA") |>pull(distance)
 ```
 
-The standard deviation is NA as there is only one value.
+#### The standard deviation is NA as there is only one value.
 
-The standard deviation is 0 as all the values for a specific carrier are the same .An example would be HA the distance is 4983 for all therefore the standard deviation value is 0.\
+#### The standard deviation is 0 as all the values for a specific carrier are the same .An example would be HA the distance is 4983 for all therefore the standard deviation value is 0. 
 
 ###  Constructing a dataframe  where the carriers are along the columns, and the rows are the average departure delay (`dep_delay`) flown by each carrier (`carrier`) in each month
 
@@ -48,10 +48,10 @@ new_df
 ### Proportion of flights that were delayed but arrived on time
 
 ```{r}
-filteredfli <-flights |>filter(dep_delay>0&arr_delay<=0) 
-filterlen <-nrow(filteredfli)
-originallen<-nrow(flights)
-prop <- filterlen/originallen
+filtered_fli <-flights |>filter(dep_delay>0&arr_delay<=0) 
+filter_len <-nrow(filtered_fli)
+original_len<-nrow(flights)
+prop <- filter_len/original_len
 prop
 ```
 
@@ -82,8 +82,7 @@ minname
 
 ###   Reason for difference
 
-\
-A possible reason could be too many flights departing early and arriving late
+####  A possible reason could be too many flights departing early and arriving late .
 
 ### Indentifying inconsistency 
 

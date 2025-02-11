@@ -160,7 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Prac3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical Three</span></span></a>
   </div>
 </li>
     </ul>
@@ -221,8 +221,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  k <span class="ot">&lt;-</span> f<span class="sc">*</span><span class="fu">length</span>(x)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>){</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    distance <span class="ot">&lt;-</span> <span class="fu">abs</span>(x[i]<span class="sc">-</span>x)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    distordered <span class="ot">&lt;-</span> <span class="fu">order</span>(distance)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    x_neigh <span class="ot">&lt;-</span> distordered[<span class="dv">1</span><span class="sc">:</span>k]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    dist_ordered <span class="ot">&lt;-</span> <span class="fu">order</span>(distance)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    x_neigh <span class="ot">&lt;-</span> dist_ordered[<span class="dv">1</span><span class="sc">:</span>k]</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    x_distances <span class="ot">&lt;-</span> distance[x_neigh]</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    d_max <span class="ot">&lt;-</span> <span class="fu">max</span>(x_distances)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    Wj <span class="ot">&lt;-</span> (<span class="dv">1</span><span class="sc">-</span>(distance[x_neigh]<span class="sc">/</span>d_max)<span class="sc">^</span><span class="dv">3</span>)<span class="sc">^</span><span class="dv">3</span></span>
@@ -693,8 +693,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Prac3.html" class="pagination-link" aria-label="Practical 3">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical 3</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Prac3.html" class="pagination-link" aria-label="Practical Three">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical Three</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

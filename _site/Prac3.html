@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Practical 3 – Statistical Computing</title>
+<title>4&nbsp; Practical Three – Statistical Computing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Prac3.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical 3</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Prac3.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical Three</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -159,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Prac3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical Three</span></span></a>
   </div>
 </li>
     </ul>
@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical 3</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Practical Three</span></h1>
 </div>
 
 
@@ -355,9 +355,12 @@ Attaching package: 'dplyr'</code></pre>
 [331] 4983 4983 4983 4983 4983 4983 4983 4983 4983 4983 4983 4983</code></pre>
 </div>
 </div>
-<p>The standard deviation is NA as there is only one value.</p>
-<p>The standard deviation is 0 as all the values for a specific carrier are the same .An example would be HA the distance is 4983 for all therefore the standard deviation value is 0.<br>
-</p>
+<section id="the-standard-deviation-is-na-as-there-is-only-one-value." class="level4" data-number="4.0.4.1">
+<h4 data-number="4.0.4.1" class="anchored" data-anchor-id="the-standard-deviation-is-na-as-there-is-only-one-value."><span class="header-section-number">4.0.4.1</span> The standard deviation is NA as there is only one value.</h4>
+</section>
+<section id="the-standard-deviation-is-0-as-all-the-values-for-a-specific-carrier-are-the-same-.an-example-would-be-ha-the-distance-is-4983-for-all-therefore-the-standard-deviation-value-is-0." class="level4" data-number="4.0.4.2">
+<h4 data-number="4.0.4.2" class="anchored" data-anchor-id="the-standard-deviation-is-0-as-all-the-values-for-a-specific-carrier-are-the-same-.an-example-would-be-ha-the-distance-is-4983-for-all-therefore-the-standard-deviation-value-is-0."><span class="header-section-number">4.0.4.2</span> The standard deviation is 0 as all the values for a specific carrier are the same .An example would be HA the distance is 4983 for all therefore the standard deviation value is 0.</h4>
+</section>
 </section>
 <section id="constructing-a-dataframe-where-the-carriers-are-along-the-columns-and-the-rows-are-the-average-departure-delay-dep_delay-flown-by-each-carrier-carrier-in-each-month" class="level3" data-number="4.0.5">
 <h3 data-number="4.0.5" class="anchored" data-anchor-id="constructing-a-dataframe-where-the-carriers-are-along-the-columns-and-the-rows-are-the-average-departure-delay-dep_delay-flown-by-each-carrier-carrier-in-each-month"><span class="header-section-number">4.0.5</span> Constructing a dataframe &nbsp;where the carriers are along the columns, and the rows are the average departure delay (<code>dep_delay</code>) flown by each carrier (<code>carrier</code>) in each month</h3>
@@ -392,10 +395,10 @@ Attaching package: 'dplyr'</code></pre>
 <section id="proportion-of-flights-that-were-delayed-but-arrived-on-time" class="level3" data-number="4.0.6">
 <h3 data-number="4.0.6" class="anchored" data-anchor-id="proportion-of-flights-that-were-delayed-but-arrived-on-time"><span class="header-section-number">4.0.6</span> Proportion of flights that were delayed but arrived on time</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>filteredfli <span class="ot">&lt;-</span>flights <span class="sc">|&gt;</span><span class="fu">filter</span>(dep_delay<span class="sc">&gt;</span><span class="dv">0</span><span class="sc">&amp;</span>arr_delay<span class="sc">&lt;=</span><span class="dv">0</span>) </span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>filterlen <span class="ot">&lt;-</span><span class="fu">nrow</span>(filteredfli)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>originallen<span class="ot">&lt;-</span><span class="fu">nrow</span>(flights)</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>prop <span class="ot">&lt;-</span> filterlen<span class="sc">/</span>originallen</span>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>filtered_fli <span class="ot">&lt;-</span>flights <span class="sc">|&gt;</span><span class="fu">filter</span>(dep_delay<span class="sc">&gt;</span><span class="dv">0</span><span class="sc">&amp;</span>arr_delay<span class="sc">&lt;=</span><span class="dv">0</span>) </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>filter_len <span class="ot">&lt;-</span><span class="fu">nrow</span>(filtered_fli)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>original_len<span class="ot">&lt;-</span><span class="fu">nrow</span>(flights)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>prop <span class="ot">&lt;-</span> filter_len<span class="sc">/</span>original_len</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>prop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.1052391</code></pre>
@@ -484,8 +487,9 @@ the `.groups` argument.</code></pre>
 </section>
 <section id="reason-for-difference" class="level3" data-number="4.0.10">
 <h3 data-number="4.0.10" class="anchored" data-anchor-id="reason-for-difference"><span class="header-section-number">4.0.10</span> Reason for difference</h3>
-<p><br>
-A possible reason could be too many flights departing early and arriving late</p>
+<section id="a-possible-reason-could-be-too-many-flights-departing-early-and-arriving-late-." class="level4" data-number="4.0.10.1">
+<h4 data-number="4.0.10.1" class="anchored" data-anchor-id="a-possible-reason-could-be-too-many-flights-departing-early-and-arriving-late-."><span class="header-section-number">4.0.10.1</span> A possible reason could be too many flights departing early and arriving late .</h4>
+</section>
 </section>
 <section id="indentifying-inconsistency" class="level3" data-number="4.0.11">
 <h3 data-number="4.0.11" class="anchored" data-anchor-id="indentifying-inconsistency"><span class="header-section-number">4.0.11</span> Indentifying inconsistency</h3>
@@ -590,52 +594,52 @@ A possible reason could be too many flights departing early and arriving late</p
 <span id="cb33-98"><a href="#cb33-98" aria-hidden="true" tabindex="-1"></a>UtilsDataRSV<span class="sc">::</span><span class="fu">view_cols</span>(dataset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "id"
- [1] "id_14" "id_46" "id_20" "id_42" "id_49" "id_11" "id_12" "id_35" "id_45"
-[10] "id_17" "id_24" "id_27" "id_30" "id_44" "id_43" "id_15" "id_21" "id_38"
-[19] "id_5"  "id_4" 
+ [1] "id_49" "id_20" "id_35" "id_39" "id_25" "id_42" "id_5"  "id_47" "id_18"
+[10] "id_22" "id_30" "id_14" "id_6"  "id_32" "id_43" "id_46" "id_13" "id_29"
+[19] "id_40" "id_8" 
 [1] "30 unique entries not displayed"
 [1] "_____________________"
 [1] "age"
-[1] 44 29 55 54 42
+[1] 22 70 79 58 62
 [1] "_____________________"
 [1] "gender"
-[1] "male"   "female" "femal" 
+[1] "female" "femal"  "male"  
 [1] "_____________________"
 [1] "height"
-[1] 194.5 157.7 153.0 186.0    NA
+[1] 197.7 174.1 177.5 174.4    NA
 [1] "_____________________"
 [1] "weight"
-[1] 87.0 65.6 61.1 78.6 61.9
+[1] 69.5 76.5 73.3 99.3 81.0
 [1] "_____________________"
 [1] "blood_type"
-[1] "AB" "O"  "B"  "A" 
+[1] "A"  "O"  "B"  "AB"
 [1] "_____________________"
 [1] "disease_status"
-[1] "diseased" "healthy"  "Healthy" 
+[1] "Healthy"  "healthy"  "diseased"
 [1] "_____________________"
 [1] "cholesterol"
-[1] 224 173 162 213 166
+[1] 248 189 213 250 224
 [1] "_____________________"
 [1] "glucose"
-[1]  85  96  93 118  NA
+[1] 78 99 77 94 NA
 [1] "_____________________"
 [1] "smoker"
 [1] "no"  "yes"
 [1] "_____________________"
 [1] "exercise"
-[1] "occasional" "regular"    "none"      
+[1] "none"       "regular"    "occasional"
 [1] "_____________________"
 [1] "income"
-[1] 43750 77584 56261 54510 88662
+[1] 51178 82518 84173 21441 69750
 [1] "_____________________"
 [1] "education"
-[1] "bachelor"   "master"     "PhD"        "highschool"
+[1] "PhD"        "bachelor"   "highschool" "master"    
 [1] "_____________________"
 [1] "region"
 [1] "North" "South" "East"  "West" 
 [1] "_____________________"
 [1] "marital_status"
-[1] "divorced" "single"   "widowed"  "married" 
+[1] "single"   "widowed"  "divorced" "married" 
 [1] "_____________________"</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
